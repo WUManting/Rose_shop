@@ -1,0 +1,54 @@
+@import "module/base.scss";
+@import "module/header.scss";
+@import "module/footer.scss";
+//@import "../libs/bootstrap/css/bootstrap.min.css";
+main{
+    height: 650px;
+    width: 100%;
+    max-width: 1920px;
+    .bg-dlzc{
+        width: 100%;
+        height: 673px;
+        position: relative;
+        background-size: cover;
+        background:url(/img/dlzc.jpg) no-repeat center;
+        .form-container{
+            margin:35px auto;
+            left: 65%;
+            width: 395px;
+            height: 515px;
+            background: #fafafa;
+            
+            // padding-top: 40px;
+            // font-size: 14px;
+            // color: #000;
+            float: right;
+            position: absolute;
+            h1{
+                color: red;
+                text-align: center;
+                margin-top: 35px;
+            }
+            .txt-info{
+                float: right;
+            }
+           .control-label{
+                font-size: 14px;
+                position: relative;
+                top: 26px;
+                left:5px;
+            }
+            input{
+                width: 290px;
+                margin-left: 70px;
+                border: solid 1px #b3b3b3;
+                font-size: 14px;
+                padding: 10px 0 10px 5px;
+                position: relative;
+                margin-top: 0px;
+            }
+        }
+    }
+
+    
+}

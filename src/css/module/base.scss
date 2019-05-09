@@ -1,0 +1,27 @@
+.hidden-dlzc{display: none;}
+*{
+	margin: 0;
+	padding: 0;
+}
+body {
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    font-family: '微软雅黑', 'Microsoft YaHei';
+}
+ul,ol,li{
+	list-style: none;
+}
+a{
+    
+	text-decoration: none !important ;
+}
+img{
+	border: none;
+	vertical-align: top;
+}
+
+a img {
+    border: 0
+}

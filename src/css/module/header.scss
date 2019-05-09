@@ -1,0 +1,444 @@
+@import "../libs/font_rose/iconfont.css";
+header{
+	width: 100%;
+	height: 160px;
+	.header{
+		width: 100%;
+		height: 40px;
+		background-color:#414141 ;
+		a{color: #414141;}
+		// a{color: nth($baseColor,1);}
+		.head{
+			width:1240px;
+			height: 40px;
+			margin: 0 auto;
+			position: relative;
+			background-color:  #414141;
+			.language{
+				width:	95px;
+				height: 40px;
+				float: left;
+				font-size: 13px;
+				background: url(/img/list.png) no-repeat;
+				background-size: auto 30%;
+				background-position: 10px, 14px;
+				label{
+					display: block;
+					// cursor: pointer;
+					padding-left: 61px;
+					height: 40px;
+					z-index: 999;
+					color: #afafaf;
+					line-height: 40px;
+					background: url(/img/cn.png) no-repeat;
+					background-size: 18px;
+					background-position: 34px 11px;
+				}
+				&:hover .country{
+					display: block;
+					
+				}
+				.country{
+					display: none;
+					position: absolute;
+					// left: 0;
+					// top: 35px;
+					width: 94px;
+					height: 80px;
+					box-sizing: border-box;
+					background-color:#565656;
+					
+					li{
+						height: 40px;
+						line-height: 40px;
+						text-align: left;
+						&:hover{
+							background-color:#717171;	
+						}
+						a{
+							display:block;
+							color:#fff;
+							font-size:14px;
+							padding-left: 50px;
+							box-sizing: border-box;
+						}
+					}
+					.hk{
+						background: url(/img/hongkong.svg) no-repeat;
+						background-size: 20px;
+						background-position: 20px 10px;
+					}
+					.cn{
+						background: url(/img/cn.png) no-repeat;
+						background-size: 20px;
+						background-position: 20px 10px;
+					}
+					a{
+						display: block;
+						color: #fff;
+						font-size: 14px;
+						padding-left: 50px;
+						box-sizing: border-box;
+					}
+				}
+			}
+			.roseonly-logo{
+				width:	128px;
+				height: 40px;
+				left: 94px;
+				display: block;
+				position: absolute;
+				background-color:#414141;
+				background-image: url(/img/rose.svg)  ;				
+				background-size: 128px 44px;
+				box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.3) inset;
+				
+			}
+			.larose-logo{
+				width: 128px;
+				height: 40px;
+				display: block;
+				left: 223px;
+				background-image: url(/img/love.svg);				
+				background-color: #414141;
+				background-size: 128px 40px;
+				box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.3) inset;
+				position: absolute;
+				.logo_line2{
+					width: 1px;
+					height: 20px;
+					background: #c6c6c6;
+					position: absolute;
+					left: 128px;
+					top: 10px;
+				}
+				&:hover{
+					background-color: #fbefef;
+				}
+			}
+			
+			.wedding-logo{
+				// font-size: 14px;
+				width: 128px;
+				height: 40px;
+				// line-height: 40px;
+				// text-align: center;
+				// display: block;
+				// float: left;
+				// left: 256px;
+				background-image: url(/img/wedding.svg);
+				background-size: 128px 40px;
+				position: absolute;
+				left: 351px;
+				&:hover{
+					background-color: #ffffff;
+				}
+			}
+			>.right-hello{
+				font-size: 12px;
+				margin-top: 40px;
+				position: absolute;
+				right: 0px;
+				bottom: 0px;
+				// width: 117px;
+				height: 40px;
+				>.nav-hello{
+					width: 150px;
+					height:80px;
+					position: absolute;
+					right: 110px;
+					background-color: red;
+					text-align: center;
+					a{
+						text-align: right;
+					}
+				}
+				a{
+					display: block;
+					color: #fff;
+				}
+				li {
+					float: left;
+					padding-top: 12px;
+				}
+				.iconfont{
+					color:white;
+				}
+				.right_dlzc {
+					width: 33px;
+					height: 40px;
+					margin-left: 8px;
+					padding-top: 12px;
+					position: relative;
+					cursor: pointer;
+					&:hover .header_toplogin_con {
+						display: block;
+					}
+					.h_dlzc {
+						width: 13px;
+						height: 16px;
+						margin: 0 auto;
+					}
+					.header_toplogin_con {
+						width: 300px;
+						height: 170px;
+						margin-top: 20px;
+						display: none;
+						position: absolute;
+						z-index: 2;
+						right: -77px;
+						top: 20px;
+						background: #fff;
+						border: 1px solid #eee;
+						box-sizing: border-box;
+						.header_toplogin{
+							height: 160px;
+							background: #ffffff;
+							.h_line {
+								padding: 0 6px 0 6px;
+								color:#414141;
+							}
+							.h_font{
+								color:#414141;
+								&:hover {
+									font-weight: bold;
+								}
+							}
+							a{
+								color: #414141;
+							}
+							.header_dlzc {
+								height: 40px;
+								line-height: 40px;
+								width: 95px;
+								margin: 0 auto;
+								text-align: center;
+								a {
+									float: left;
+								}
+								.zc_flr{
+									float: right;
+								   }
+							}
+							.top_ewm{ 
+								margin: 0 auto;
+								padding: 0;
+								width: 268px;
+								border-top: 1px solid #d8d8d8;
+								dt{
+									width: 88px;
+									height: 88px;
+									float: left;
+									margin-top: 15px;
+									margin-right: 15px;
+									background-image: url(/img/code.jpg) ;
+									background-size: 100%;
+								 }
+								dd{
+									float:left;
+									margin: 0;
+									margin-top: 10px;
+									text-align: left;
+									h1{
+										font-size: 14px;
+										font-weight: bold;
+										height:25px
+									}
+									p{
+										font-size: 12px;
+										line-height: 22px;
+										margin: 0;
+										
+									}
+								}
+							}
+						}
+						
+					}
+					
+
+				}
+				.h_dlzc_line{
+					width: 1px;
+					height: 19px;
+					background-image: url(https://www.roseonly.com.cn/upload/syspic_new/15320780285968062.jpg);
+					margin-top:10px
+				}
+				.h_right-shop{
+					width: 36px;
+					position: relative;
+					margin: 0 6px 0 10px;
+					overflow: hidden;
+					// .right-shop {
+					// 	width: 16px;
+					// 	min-width: 16px;
+					// 	height: 18px; 
+					// 	background-size: 100% auto;
+					// 	background: url(https://www.roseonly.com.cn/upload/syspic_new/15324923612004495.svg) no-repeat;  
+					// 	padding-top:12px;
+					// 	&:hover {
+					// 		background-size: 14px;
+					// 		background-image: url(https://www.roseonly.com.cn/upload/syspic_new/15324923612004495.svg);
+					// 	}
+					// }
+				}
+				.cartNum{
+					color: #fff;
+					position: absolute;
+					right: 50px;
+					margin-right: 5px;
+				}
+				   
+				.coordinate{
+					float:right;
+					.std {
+						width: 50px;
+						position: relative;
+						left:15px;
+					}
+				}
+				
+			}
+		}
+		
+	}
+	.logo-container{
+		width: 100%;
+		height: 80px;
+		margin: 0 auto;
+		position: relative;
+		background: #414141;
+		box-shadow: 0px -2px 7px rgba(0, 0, 0, 0.5);
+		min-width: 1240px;
+		a{
+			width: 143px;
+			height: 80px;
+			margin: 0 auto;
+			display: block;
+			background-image: url(/img/logo.png);
+		}
+	}
+	.nav-container{
+		position: relative;
+		background: #414141;
+		width: 100%;
+		min-width: 1240px;
+		.nav-bar{
+			font-size: 14px;
+			ul{
+				display: table;
+				margin: 0 auto;
+				li{
+					float: left;
+					width: 70px;
+					margin: 0 24px;
+					display: inline;
+					a{
+						color: #fff;
+						 &:hover {
+							color: #414141;
+							background: #fff;
+						}
+					}
+					.topmenu_1{
+						position: relative;
+						display: block;
+						line-height: 40px;
+						text-align: center;
+					}
+				
+					&:hover {
+						background: #fff;
+						color:#414141;
+						a{
+							color:#414141;
+						}
+						.menus2{
+							
+							display: block;
+							background-color: #fff;
+							
+						}
+					}
+
+					.menus2 {
+						width: 100%;
+						font-size: 14px;
+						display: none;
+						position: absolute;
+						top: 40px;
+						left: 0;
+						z-index: 999;
+						border-bottom: 3px solid #414141;
+						min-height: 320px;
+						.menus {
+							width: 1240px;
+							min-height: 320px;
+							margin: 0 auto;
+							position: relative;
+							background: #fff;
+							.number1 {
+								margin-top: 25px;
+								float: left;
+								text-align: left;
+								padding:0 65px;
+								border-left: 1px solid #414141;
+								&:first-child{
+									border: 0;
+								}
+								.sort{
+									font-size: 14px;
+									font-weight: bold;
+									cursor: default;	
+								}
+								a{
+									span {
+										
+										display: block;
+										margin: 0;
+										padding: 0;
+										top: 16px;
+										color: #000;
+										padding-bottom: 16px;
+										position: relative;
+										&:hover{
+											color: #83847e
+										}
+										img{
+											width: 50px;
+											height: 27px;
+											position: absolute;
+											bottom: 20px;
+											left: 40px;
+										}
+									}
+								}
+								
+									
+							}
+							.menus_pic{
+								width: 605px;
+								height: 250px;
+								background: #d1d1d1;
+								right: 0;
+								top: 25px;
+								position: absolute;
+							}
+							
+						}
+					}
+					
+				}
+			}
+		}
+		
+	}
+
+
+
+
+
+
+
+	
+}
