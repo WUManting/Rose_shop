@@ -1,0 +1,21 @@
+@import "module/base.scss";
+@import "module/header.scss";
+@import "module/footer.scss";
+main{
+    width: 1240px;
+    margin: 0px auto 0;
+    background: #fbefef;
+    .cart-container{
+        width: 962px;
+        margin: 0 auto 30px;
+        min-height: 500px;
+        .cart-help{
+            width: 100%;
+            font-size: 12px;
+            div{
+                font-size: 18px;
+                line-height: 30px;
+            }
+        }
+    }
+}

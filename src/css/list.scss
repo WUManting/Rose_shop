@@ -1,0 +1,98 @@
+@import "module/base.scss";
+@import "module/header.scss";
+@import "module/footer.scss";
+main {
+    width: 1240px;
+    margin: 0px auto 0;
+    background: #fbefef;
+    .rose_select{
+        line-height: 20px;
+        font-size: 14px;
+        color: #414141;
+        letter-spacing: 1px;
+        margin-top: 10px;
+        border-top: solid 1px #414141;
+        border-bottom: solid 1px #414141;
+        position: relative;
+        a{
+            color: #414141;
+            display: inline-block;
+            width: 57px;
+            margin: 0 30px;
+            text-align: center;
+            // height: 30px;
+            &:hover{
+                border-bottom: solid 9px #414141;
+                font-weight: bold;
+            }
+           
+        }
+        #pay {
+            color: #414141;
+            display: inline-block;
+            width: 57px;
+            margin: 0 30px;
+            text-align: center;
+            border-bottom: none;
+            height: 30px;
+            background: url(/img/pay.png) no-repeat 100% 18%;
+            
+        }
+        .rose_select_input {
+            width: 200px;
+            height: 29px;
+            margin: 5px 10px;
+            display: inline-block;
+            border: solid 1px #b3b3b3;
+            color: #000;
+            font-size: 14px;
+            text-indent: 5px;
+            outline: none;
+        }
+        .rose_select_span {
+            display: inline-block;
+            text-align: center;
+            color: #b3b3b3;
+        }
+    }
+    .shopItem{
+        ul{
+            // display: none;
+            // position: relative;
+            // z-index: 999;
+            min-height: 500px;
+            li{
+                width: 310px;
+                height: 415px;
+                float: left;
+                color: #000;
+                background: #6666;
+                text-align: center;
+                position: relative;
+                transition: all .8s ease-in-out;
+                a{
+                    display: block;
+                    width: 260px;
+                    height: 260px;
+                    margin: 24px auto;
+                    color: #000;
+                    img{
+                        width: 260px;
+                        height: 260px;
+                        position: relative;
+                        margin-bottom: 40px;
+                    }
+                }
+                .fs1{
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+                p{
+                    font-size: 12px;
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+}
+

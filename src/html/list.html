@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/list.css">
+</head>
+<body>
+    <header id="header-container"></header>
+    <main>
+        <div class="rose_select">
+            <a href="javascript:;" id="initpage" class="sort sort_add">综合</a>
+            <a href="javascript:;" id="salenum" class="sort">销量</a>
+            <a href="javascript:;" id="newest" class="sort">最新</a>
+            <a href="javascript:;" id="pay" data-flag="1" class="sort1" >价格
+               
+            </a>
+
+            <input class="rose_select_input sortprice" value="" id="minprice" min="0" placeholder="¥" type="number">
+            <span class="rose_select_span">—</span>
+            <input class="rose_select_input sortprice" value="" id="maxprice" min="0" placeholder="¥" type="number">
+        </div>
+         <!-- shopItem -->
+         <div id="shopItem" class="shopItem">
+                <ul class="list-item">
+                    <li>
+                        <a href="/html/detail.html">
+                            <img class="list-imgs" src="/img/goods.png" alt="">
+                            <span></span>
+                            <b class="fs1">鲜花玫瑰 - 经典永续系列</b>
+                            <p class="fs2">金典许愿&nbsp;19支&nbsp;80cm</p>
+                            <b class="fs1">￥2399</p>
+                        </a>
+                    </li>
+                </ul>
+         </div>
+            <!-- <script type="text/html" id="list-template">
+                <ul class="list-item">
+                    {{ each list item }}
+                    <li>
+                        <a href="/html/detail.html?id={{item.id}}">
+                            <img class="list-imgs" src="{{item.image}}"  data-hover="{{item.hoverImage}}">
+                        </a>
+                        <span></span>
+                        <p>{{item.title}}</p>
+                        <p>￥{{item.price}}</p>
+                    </li>
+                    {{/each}}
+                </ul>
+            </script> -->
+        </div>
+     
+        <h1>列表页面</h1>
+        <a href="/html/detail.html">详细内容请点击 </a>
+       
+    </main>
+    <footer id="footer-container"></footer>   
+    <script src="/libs/requirejs/require.js" data-main="/js/list.js"></script>
+</body>
+</html>

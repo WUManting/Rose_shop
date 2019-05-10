@@ -25,18 +25,24 @@ main{
             float: right;
             position: absolute;
             h1{
-                color: red;
+                color:#414141;
                 text-align: center;
-                margin-top: 35px;
+                margin-top: 50px;
+                margin-bottom: 13px;
             }
-            .txt-info{
-                float: right;
-            }
-           .control-label{
-                font-size: 14px;
+          .form-horizontal{
+              display: flex;
+              justify-content: space-between;
+              flex-direction: column;
+              height: 350px;
+            //   .form-group{
+            //       height: 150px;
+            //   }
+            .control-label{
+                font-size: 16px;
                 position: relative;
                 top: 26px;
-                left:5px;
+                left: 15px;
             }
             input{
                 width: 290px;
@@ -47,6 +53,36 @@ main{
                 position: relative;
                 margin-top: 0px;
             }
+            .checkbox{
+                height: 100px;
+                width: 400px;
+                font-size: 12px;
+                // background: red;
+                span{
+                    margin-left: 30px;
+                }
+                input{
+                    width: 20px;
+                    margin-top: 40px;
+                 
+                }
+                a{
+                    color: blue;
+                }
+            }
+            .btn{
+                width: 290px;
+                height: 45px;
+                color: #fafafa;
+                line-height: 45px;
+                margin-left: 60px;
+                font-size: 16px;
+                letter-spacing: 2px;
+                border: none;
+                background-color: #414141;
+            }
+          }
+           
         }
     }
 
