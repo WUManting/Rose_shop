@@ -24,7 +24,8 @@
         </div>
          <!-- shopItem -->
          <div id="shopItem" class="shopItem">
-                <ul class="list-item">
+                <a href="/html/detail.html">详细内容请点击 </a>
+                <!-- <ul class="list-item" id="list-item">
                     <li>
                         <a href="/html/detail.html">
                             <img class="list-imgs" src="/img/goods.png" alt="">
@@ -34,27 +35,23 @@
                             <b class="fs1">￥2399</p>
                         </a>
                     </li>
-                </ul>
+                </ul> -->
          </div>
-            <!-- <script type="text/html" id="list-template">
-                <ul class="list-item">
-                    {{ each list item }}
-                    <li>
-                        <a href="/html/detail.html?id={{item.id}}">
-                            <img class="list-imgs" src="{{item.image}}"  data-hover="{{item.hoverImage}}">
-                        </a>
+         <script type="text/html" id="list-template">
+            <ul class="list-item" id="list-item">
+                {{each list item}}
+                <li>
+                    <a href="/html/detail.html?id={{item.id}}">
+                        <img class="list-imgs" src="{{item.image}}" alt="">
                         <span></span>
-                        <p>{{item.title}}</p>
-                        <p>￥{{item.price}}</p>
-                    </li>
-                    {{/each}}
-                </ul>
-            </script> -->
-        </div>
-     
-        <h1>列表页面</h1>
-        <a href="/html/detail.html">详细内容请点击 </a>
-       
+                        <b class="fs1">{{item.title}}</b>
+                        <p class="fs2">{{item.type}}</p>
+                        <b class="fs1">￥{{item.price}}</p>
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </script>
     </main>
     <footer id="footer-container"></footer>   
     <script src="/libs/requirejs/require.js" data-main="/js/list.js"></script>

@@ -19,7 +19,7 @@
 
 * 如何加载header.html模块到a.html页面(jquery方式)
 
-    	1.页面，模块已经写好，在config,js中配置模块(之前配置过就不再配置)
+     1.页面，模块已经写好，在config,js中配置模块(之前配置过就不再配置)
 
   ```javascript
   // config.js  配置模块
@@ -54,7 +54,7 @@
 
   4.在a.html中引入a.css
 
-    
+​    
 
   
 
@@ -62,4 +62,73 @@
 
   ​	 页面-->js在单独页面完成
 
+  # 接口文档
+
+  * 首页类型请求
+
   
+
+- 首页类型请求
+
+  - baseurl-->自己的接口： http://rap2api.taobao.org/app/mock/166786/example/1556161952639 
+
+    url-->首页的接口：http://www.****.com/api/v1/index/type
+
+* 列表页接口
+
+  * url-->后端的真实接口  ：http://www.****.com/api/v1/list/get
+
+  * baseUrl-->前端虚拟接口(rap2)：<http://rap2api.taobao.org/app/mock/166786/list/get> 
+
+  * method:get
+
+  * data:{
+
+    ​	}
+
+* 详情页接口
+
+  * url-->后端的真实接口  ：http://www.****.com/api/v1/detail/get
+
+  * baseUrl-->前端虚拟接口(rap2)：<http://rap2api.taobao.org/app/mock/166786/list/get> 
+
+  * method:get
+
+  * query : {id}
+
+  * data:{
+
+    ​	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

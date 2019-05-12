@@ -42,10 +42,10 @@ gulp.task('js',()=>{
        1.ES6转ES5,2.压缩js
     */
     gulp.src('src/js/**/*.js')
-        .pipe(babel({
-            presets: ['@babel/env']
-        }))
-        .pipe(uglify())
+        // .pipe(babel({
+        //     presets: ['@babel/env']
+        // }))
+        // .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
         .pipe(connect.reload())
 
