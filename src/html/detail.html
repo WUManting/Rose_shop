@@ -11,22 +11,24 @@
 <body>
     <header id="header-container"></header>
     <main>
-        <div class="detail-container">
-            <div class="left">
-                <div class="left-top">1</div>
+        <div class="detail-container" id="detail-container">
+            <!-- <div class="left">
+                <div class="left-top">
+                    <img src="/img/detail-big.png" alt="">
+                </div>
                 <div class="left-bottom">
                     <div class="lb-left"></div>
                     <a href="javascript:;">
-                        <img src="/src/img/detail1.png" alt="">
+                        <img src="/img/detail1.png" alt="">
                     </a>
                     <a href="javascript:;">
-                            <img src="/src/img/detail1.png" alt="">
+                            <img src="/img/detail1.png" alt="">
                     </a>
                     <a href="javascript:;">
-                        <img src="/src/img/detail1.png" alt="">
+                        <img src="/img/detail1.png" alt="">
                     </a>
                     <a href="javascript:;">
-                        <img src="/src/img/detail1.png" alt="">
+                        <img src="/img/detail1.png" alt="">
                     </a>
                     <div class="lb-right"></div>
                 </div>
@@ -54,9 +56,55 @@
                 <a href="javascript:;" class="button  bar2 " name="toCar">加入购物车</a>
                 <div class="clear"></div>
                 <div class="txt">服务承诺：官方正品&nbsp;&nbsp;&nbsp;免邮配送&nbsp;&nbsp;&nbsp;同城速递</div>
-            </div>
+            </div> -->
         </div>
-        
+        <script type="text/html" id="detail-template">
+            <div class="left">
+                <div class="left-top">
+                    <img class="zoom-img" src="{{data.imgs[0]}}"data-zoom-image={{data.imgs[0]}}>
+                </div>
+                <div class="left-bottom" id="gal1">
+                    <div class="lb-left"></div>
+                    <a href="javascript:;" data-image={{data.imgs[0]}} data-zoom-image={{data.imgs[0]}}>
+                        <img src="{{data.imgs[0]}}" alt="">
+                    </a>
+                    <a href="javascript:;"data-image={{data.imgs[1]}} data-zoom-image={{data.imgs[1]}}>
+                            <img src="{{data.imgs[1]}}" alt="">
+                    </a>
+                    <a href="javascript:;"data-image={{data.imgs[2]}} data-zoom-image={{data.imgs[2]}}>
+                        <img src="{{data.imgs[2]}}" alt="">
+                    </a>
+                    <a href="javascript:;"data-image={{data.imgs[3]}} data-zoom-image={{data.imgs[3]}}>
+                        <img src="{{data.imgs[3]}}" alt="">
+                    </a>
+                    <div class="lb-right"></div>
+                </div>
+            </div>
+            <div class="right">
+                <p class="p1">{{data.title}}</p>
+                <p class="p2">1024010005</p>
+                <div class="right_pay"><span>价格 :</span>¥{{data.price}}</div>
+                <div class="select">
+                    <span >颜色：</span>
+                    <div class="p-choose choose-color ">
+                        <img class="select_color selected " src="/img/color.png"  title="朱砂">
+                    </div>
+                </div>
+                <div class="select">
+                        <span class="right_font_tit">数量：</span>
+                        <input value="1" maxlength="2" type="text">
+                        <div class="u_d">
+                            <a href="javascript:void(0);" class="up"></a>
+                            <a href="javascript:void(0);" class="down"></a>
+                        </div>
+                        <div class="clear"></div>
+                </div>
+                <a href="javascript:;" class="button  bar1 " name="toBuy">立即购买</a>
+                <a href="javascript:;" class="button  bar2 " data-id="{{data.id}}"name="toCar" >加入购物车</a>
+                <div class="clear"></div>
+                <div class="txt">服务承诺：官方正品&nbsp;&nbsp;&nbsp;免邮配送&nbsp;&nbsp;&nbsp;同城速递</div>
+            </div>
+        </script>
         
     </main>
     <footer id="footer-container"></footer>
