@@ -29,10 +29,28 @@ require(['require.config'],()=>{
             }
             //购物车，事件委托
             addCart(){
+                $("#detail-container").on('click','.up',e=>{
+                    let num = Number($('.up').parent().prev().val());
+                    num=num+1;
+                     $('.input').val(num);
+                    // console.log(num);
+
+                })
+                $("#detail-container").on('click','.down',e=>{
+                    let num = Number($('.down').parent().prev().val());
+                    num=num-1;
+                    if(num<1){
+                        num=1;
+                    }
+                    $('.input').val(num);
+                    // console.log(num);
+                    
+                })
+
+
                 //列表页自定义属性，详情页不用
                 $("#detail-container").on('click','.bar2',e =>{
 
-                    console.log($("#cartNum"));
                     // 购物车抛物线动画
                      $(`<img src='${this.data.imgs[0]}' style='width:30px;height:30px'/>`).fly({
                         start: {
@@ -47,14 +65,17 @@ require(['require.config'],()=>{
                         },
                         onEnd: function () {
                             this.destroy(); //销毁抛物体
-                            header.calcCartNum(); // 再调用一次计算购物车数量的方法，避免刷新
+                            header.calcCartNUm(); // 再调用一次计算购物车数量的方法，避免刷新
                          }
                      });
 
 
                 //购物车数量     
                     let cart =localStorage.getItem('cart');
+                    
                     let index=-1;
+                    let a=Number($('.input').val());
+                    console.log(a);
                     if(cart){
                     //1.已经存过购物车，判断有木有当前商品
                    cart=JSON.parse(cart);
@@ -63,23 +84,24 @@ require(['require.config'],()=>{
                             return shop.id===this.data.id;
                             })){
                                 //a.已经存过
-                                cart[index].num++;
+                                cart[index].num= cart[index].num+a;
 
                             }else{
                                 // b.没有存过
-                                cart.push({...this.data,num:1});
+                                cart.push({...this.data,num:a});
                             }
 
 
                     
                     }else{
                     //2.购物车为空
-                    cart=[{...this.data , num:1}];
+                    cart=[{...this.data , num:a}];
 
                     }
                     //3.加入购物车后，重新存cart
                     localStorage.setItem('cart',JSON.stringify(cart));
                 })
+
 
             }
             zoom(){

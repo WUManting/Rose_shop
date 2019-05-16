@@ -118,6 +118,13 @@
 
 * 清空购物车
 
+* 引入CSS,离body标签越近，优先级越高，
+
+* Swiper
+
+  * 1.遵循AMD规范，需要接收
+  * 使用时1.在require.config中配置；2.在html中link进去css,script进去js(但由于遵循AMD规范，所以不需要再次引入)
+
 
 
 

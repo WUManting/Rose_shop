@@ -5,8 +5,6 @@ require(['require.config'],()=>{
         console.log(url);
         class List{
             constructor(){
-                console.log(222);
-
                 this.getDeta();
             }
             //请求数据列表

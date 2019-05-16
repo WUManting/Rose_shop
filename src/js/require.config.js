@@ -9,7 +9,8 @@ require.config({
         "template" :"libs/art-template/template-web",
         "cookie"   :"libs/jquery-plugins/jquery.cookie",
         "zoom"  : "libs/jquery-plugins/jquery.elevateZoom-3.0.8.min",
-        "fly":"libs/jquery-plugins/jquery.fly"
+        "fly":"libs/jquery-plugins/jquery.fly",
+        "swiper":"libs/swiper/js/swiper"
     },
     //垫片，给不满足AMD规范但又要依赖于别的模块的插件提供的
     shim:   {

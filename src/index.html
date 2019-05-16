@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="/libs/swiper/css/swiper.min.css">
     <!-- <link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="css/index.css">
     <!-- <link rel="stylesheet" href="/libs/font_rose/iconfont.css"> -->
@@ -22,8 +23,29 @@
                     <div class="swiper-slide"><img src="/img/banner_5.jpg"></div>
 				</div>
 				<!--分页器 -->
-				<div class="swiper-pagination"></div>
-		</div>
+                <div class="swiper-pagination"></div>
+                <!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                
+                <!-- 如果需要滚动条 -->
+                <div class="swiper-scrollbar"></div>
+        </div>
+        <ul class="index-item" id="index-item"></ul>
+        <script type="text/html" id="index-template">
+            {{each list item}}
+                <li>
+                    <a href="/html/detail.html?id={{item.id}}">
+                        <img src="{{item.image}}" alt="">
+                        <span></span>
+                        <b class="fs1">{{item.title}}</b>
+                        <p class="fs2">{{item.type}}</p>
+                        <b class="fs1">￥{{item.price}}</b>  
+                    </a>
+                </li>
+           {{/each}}
+        </script>
+       
        
     </main>
     <footer id="footer-container"></footer>
