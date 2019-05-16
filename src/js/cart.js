@@ -6,18 +6,22 @@ require(['require.config'],()=>{
                 this.init();
             }
             init(){
-                let cart=localStorage.getItem('cart');
-                if(cart){
+                this.cart=JSON.parse(localStorage.getItem('cart'));
+                console.log(this.cart);
+                if(this.cart){
                     //购物车不为空，渲染列表
-                    cart=JSON.parse(cart);
-                    this.render(cart);
+                    this.render();
 
                 }
             }
-            render(cart){
-
+            render(){
+                let cart = this.cart;
+                console.log(cart);
+                console.log(cart[0].imgs);
+                $("#list-container").html(template('cart-template', {cart}));
+            
             }
         }
-        new Cart;
+        new Cart();
     })
 })

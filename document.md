@@ -56,7 +56,8 @@
 
 ​    
 
-  
+*  模块里面用promise写异步，要做的操作放在then里面；页面要使用模块的DOM结构的话用事件委托完成
+* 箭头函数  _this指外层函数，this指内部
 
 * 登录：弹框-->js在module中完成
 
@@ -100,9 +101,22 @@
 
     ​	}
 
+* 注册接口
 
+  * url：http://localhost/rosely/api/v1/user/register.php
+  * method:post
+  * query{username,password}
+  * data{...}
 
+* 登录接口要引入cookie，需要require了cookie之后才能使用cookie
 
+* .header.js和login.js都需要cookie插件
+
+* jquery对象  ；原生写法
+
+* jquery里面提供的用来获取或者提供属性的方法 .attr()  .prop(),
+
+* 清空购物车
 
 
 

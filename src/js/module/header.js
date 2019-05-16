@@ -1,9 +1,11 @@
-define(['jquery'],$=>{
+define(['jquery','cookie'],$=>{
     //console.log($);
     function Header(){
         this.container=$("#header-container");
         this.load().then(()=>{
             this.search();
+            this.isLogin();
+            this.calcCartNUm();
         });
        
 
@@ -21,6 +23,7 @@ define(['jquery'],$=>{
             return new Promise(resolve=>{
                 this.container.load('/html/module/header.html', () => {
                 resolve();
+               
             });
         })   
     },
@@ -54,10 +57,55 @@ define(['jquery'],$=>{
                     }
                 })
             })
+        },
+        isLogin(){
+            this.loginBtn=$('#login-btn');
+            this.afterBtn=$('#after-login');
+            this.nameSpan=$('#username-span');
+            this.logout = $("#exit");
+            let username=$.cookie("username");
+            if(username) {
+                console.log(this);
+                
+                this.loginBtn.hide();
+                this.afterBtn.show();
+                
+                this.nameSpan.html(username);
+              }else{
+                this.loginBtn.show();
+                this.afterBtn.hide();
+              }
+              this.logout.on("click", () => {
+                // 退出登录
+                if(confirm("确定要退出吗？")){
+                  $.removeCookie("username", { path: '/' });
+                //   $("div").removeAttr(".hidden-dlzc");
+                  this.loginBtn.show();
+                  this.afterBtn.hide();
+                  this.nameSpan.html("");
+
+                }
+              })
+        },
+        calcCartNUm(){
+            let cart=localStorage.getItem('cart');
+            let num=0;
+            if(cart){
+                // 计算总数
+                cart=JSON.parse(cart);
+                // 总数量num,每个产品的数量n
+                num=cart.reduce((n,shop)=>{
+                    n+=shop.num;
+                    return n;
+                },0);
+            }
+            $('#cartNum').html(num);
         }
+        
         
         
        
     })
+    // 发出异步
     return new Header();
 });

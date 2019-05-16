@@ -12,9 +12,104 @@
     <header id="header-container"></header>
     <main>
         <div class="cart-container">
-                <div class="cart-shopping">
-                    <h1>1</h1>
-                    <h1>2</h1>
+           <div class="shopping">
+                 <div class="shop-a">
+                    <div class="shop-left" style="width:800px">我的购物车</div>
+                    <!-- <a href="javascript:;" class="shop-right" id="cart_del_all">清空购物车</a> -->
+                 </div>
+                <table class="shopping_cart" data-shopid="0" cellspacing="0" cellpadding="0" border="0">
+                    <thead>
+                            <tr class="shopping_cart_title">
+                                    <td width="40">&nbsp;</td>
+                                    <td width="110">品牌</td>
+                                    <td width="490">商品名称</td>
+                                    <td width="120">单价</td>
+                                    <td width="13"></td>
+                                    <td width="60">数量</td>
+                                    <td width="13"></td>
+                                    <td>操作</td>
+                            </tr>
+                    </thead>
+                    <tbody id="list-container">
+                         <!-- <tr class="wg_cart_list" data-price="1999.0" id="cart_tr_873" data-id="873" data-maxnum="10" height="120">
+                                <td>
+                                    <input type="checkbox" name="ck_carno" data-num="1" id="ck_carno873" value="873" checked="checked"> 
+                                </td>
+                                <td> roseonly</td>
+                                <td>
+                                    <img src="/img/detail1.png" class="shopping_cart_img" alt="产品图" style="cursor:pointer;" >
+                                    <div class="shopping_cart_name">
+                                        <label for="ck_carno873">星座经典-金牛座-金牛守护色-19支</label>
+                                    </div>
+                                </td>
+                                <td class="td_price_873">¥1999.0</td>
+                                <td>
+                                    <a href="javascript:;" class="cart_down"><img class="jia_jian" alt="" src="/img/cart02.png" border="0"></a>
+                                </td>
+                                <td>
+                                    <input type="text" value="1" id="cart_count_873" maxlength="4" data-num="10" class="shopping_cart_sl">
+                                </td>
+                                <td align="right">
+                                    <a href="javascript:void(0);" class="cart_up"><img class="jia_jian" alt="" src="/img/cart03.png" border="0"></a>
+                                </td>	
+                                <td>
+                                    <a href="javascript:;" class="cart_del">删除</a>
+                                </td>
+                         </tr> -->
+                         <script type="text/html" id="cart-template">
+                            {{each cart item}}
+                            <tr class="shop-list" data-price="1999.0" id="cart_tr_873" data-id="{{item.id}}" data-maxnum="10" height="120">
+                                    <td>
+                                        <input type="checkbox" name="ck_carno" data-num="1" id="ck_carno873" value="873" checked="checked"> 
+                                    </td>
+                                    <td> roseonly</td>
+                                    <td>
+                                        <img src="{{item.imgs[0]}}" class="shopping_cart_img" style="cursor:pointer;" >
+                                        <div class="shopping_cart_name">
+                                            <label >{{item.title}}</label>
+                                        </div>
+                                    </td>
+                                    <td >¥{{item.price}}</td>
+                                    <td>
+                                        <a href="javascript:;" class="cart_down">
+                                                <img class="jia_jian" alt="" src="/img/cart02.png" border="0">
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <input type="text" value="{{item.num}}" maxlength="4" data-num="10" class="shopping_cart_sl">
+                                    </td>
+                                    <td align="right">
+                                        <a href="javascript:void(0);" class="cart_up">
+                                            <img class="jia_jian" alt="" src="/img/cart03.png" border="0">
+                                        </a>
+                                    </td>	
+                                    <td>
+                                        <a href="javascript:;" class="cart_del">删除</a>
+                                    </td>
+                             </tr>
+                             {{/each}}
+                        </script>
+                            <!-- 显示赠品 -->
+                    </tbody>
+                </table>
+                        <div class="sel_all"><input type="checkbox" id="ck_all" checked="checked"><label for="ck_all">全选</label></div>
+                        <div class="cart_total">合计：¥<font id="cart_total">1999.0</font>
+                          <input type="button" class="cart_button1" value="去结算" id="cart_pay">
+                        </div>
+                                    
+                
+
+
+
+
+
+
+
+
+
+
+
+
                 </div>
                 <div class="cart-help">
                     <div >订单帮助</div>
@@ -22,10 +117,7 @@
                     <p>客服邮箱：<a href="mailto:service@roseonly.com">service@roseonly.com</a>&nbsp;&nbsp;客服工作时间：周一至周日9:00-21:00</p>
                     <p>如果您在下单过程中遇到问题，请与我们联系。因为鲜花商品对配送时效有特殊要求，订购后请随时登录查询物流状态。</p>
                 </div>
-               
-
         </div>
-        
     </main>
     <footer id="footer-container"></footer>   
     <script src="/libs/requirejs/require.js" data-main="/js/cart"></script>
