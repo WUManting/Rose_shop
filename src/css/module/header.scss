@@ -7,7 +7,6 @@ header{
 		height: 40px;
 		background-color:#414141 ;
 		a{color: #414141;}
-		// a{color: nth($baseColor,1);}
 		.head{
 			width:1240px;
 			height: 40px;
@@ -19,7 +18,6 @@ header{
 				background-color:#565656;
 				&:hover .country{
 					display: block;
-					
 				}
 			}
 			.language{
@@ -123,14 +121,8 @@ header{
 			}
 			
 			.wedding-logo{
-				// font-size: 14px;
 				width: 128px;
 				height: 40px;
-				// line-height: 40px;
-				// text-align: center;
-				// display: block;
-				// float: left;
-				// left: 256px;
 				background-image: url(/img/wedding.svg);
 				background-size: 128px 40px;
 				position: absolute;
@@ -282,18 +274,6 @@ header{
 					position: relative;
 					margin: 0 6px 0 10px;
 					overflow: hidden;
-					// .right-shop {
-					// 	width: 16px;
-					// 	min-width: 16px;
-					// 	height: 18px; 
-					// 	background-size: 100% auto;
-					// 	background: url(https://www.roseonly.com.cn/upload/syspic_new/15324923612004495.svg) no-repeat;  
-					// 	padding-top:12px;
-					// 	&:hover {
-					// 		background-size: 14px;
-					// 		background-image: url(https://www.roseonly.com.cn/upload/syspic_new/15324923612004495.svg);
-					// 	}
-					// }
 				}
 				.cartNum{
 					color: #fff;
@@ -355,6 +335,7 @@ header{
 				display: block;
 				float: right;
 				z-index: 999;
+				cursor: pointer;
 				background: #fff;
 				background-image: url(/img/search.png) ;
     			background-size: 89% 106%;
@@ -369,12 +350,6 @@ header{
 			border-right: none;
 		}
 	}
-	// &:hover .nav_cur{
-	// 	position: fixed;
-	// 	width: 100%;
-	// 	top: 0;
-	// 	z-index: 666;
-	// }
 	.nav-container{
 		position: relative;
 		background: #414141;

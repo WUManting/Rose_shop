@@ -75,7 +75,7 @@ require(['require.config'],()=>{
                                     }
                                 
                                 localStorage.setItem('cart',JSON.stringify(cart));
-                                // this.allMoney();
+                                _this.allMoney();
                             }
                     if(num<1){
                         num=1;
@@ -89,35 +89,38 @@ require(['require.config'],()=>{
             }
             // 删除
             deteItem(){
-                $(".cart-container").on('click','.cart_del',(e)=>{
-                    let target=e.target;
+                let _this=this;
+                $(".cart-container").on('click','.cart_del',function(e){
+                    // let target=e.target;
                     // let tr=$(target).parents("tr").parent();
                     // console.log(tr);
-                    $(target).parents("tr").remove();
+                    $(this).parents("tr").remove();
 
 
 
-                    //删除cart 
-                    let num = Number($(target).parents('tr').find('.shopping_cart_sl').val());
+                    //删除cart,判断存在相同id的产品，就删除 
+                    let num = Number($(this).parents('tr').find('.shopping_cart_sl').val());
                     let cart=localStorage.getItem('cart');
                     cart=JSON.parse(cart);
-                    let id=Number($(target).parents('tr').attr("data-id"));
+                
+                    let id=Number($(this).parents('tr').attr("data-id"));
+                    console.log(id);
+                    
+                   
                     let index=-1;
+                    // 通过some方法，遍历cart,数组[]中的每个对象{}。返回id相等的对象
                     if(cart.some((item,i)=>{
                         index=i;
-                        return item.id===id;
+                        console.log(item.id);
+                        return item.id===id;//三个等号或者两个等号都可以
                             })){
-                                cart.forEach(function(item,j){
-                                console.log(item);
-                                console.log(j);
-                                // splice(id,1)
-
-                                });
+                                console.log(cart[index]);
+                                cart.splice(index,1);
                                 localStorage.setItem('cart',JSON.stringify(cart));
                                 // this.allMoney();
                             }
-                    $(target).parents('tr').find('.shopping_cart_sl').val(num); 
-                    this.allMoney();
+                    $(this).parents('tr').find('.shopping_cart_sl').val(num); 
+                    // this.allMoney();
 
 
 
@@ -134,11 +137,7 @@ require(['require.config'],()=>{
                     addMoney[i]=obj[i].innerHTML;
                     Money+=Number(addMoney[i])
                 }
-                // console.log(addMoney);
-                // console.log(Money);
-
-
-
+               
                 // let cart = localStorage.getItem('cart');
                 // cart=JSON.parse(cart);
                 // cart.forEach(function(item,index){
