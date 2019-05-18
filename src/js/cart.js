@@ -3,9 +3,10 @@ require(['require.config'],()=>{
          class Cart{
             constructor(){
                 this.init();
-                this.Number();
-                this.allMoney();
-                this.deteItem();
+                this.Number();//购物车产品添加删除
+                this.allMoney();//总价
+                this.deteItem();// 删除单条项目
+                this.cartClean(); // 清空购物车
             }
             init(){
                 this.cart=JSON.parse(localStorage.getItem('cart'));
@@ -120,11 +121,7 @@ require(['require.config'],()=>{
                                 // this.allMoney();
                             }
                     $(this).parents('tr').find('.shopping_cart_sl').val(num); 
-                    // this.allMoney();
-
-
-
-
+                    this.allMoney();
                 })
             }
             // 总价
@@ -147,9 +144,19 @@ require(['require.config'],()=>{
                 //    Money+=price*num;
                 //    console.log(price*num);
 
-                // });
+                // });                                                                                                                                                                                                                       
                 $("#cart_total").text(Money);
                
+            }
+            // 清空购物车
+            cartClean(){
+                $(".cart-container").on('click','#car-clean',function(e){
+                    console.log(1);
+                    $(".shop-list").remove();
+                    let cart=localStorage.getItem('cart');
+                    cart=[];
+                    localStorage.setItem('cart',JSON.stringify(cart));
+                })
             }
             
         }

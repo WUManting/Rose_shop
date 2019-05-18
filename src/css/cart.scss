@@ -23,6 +23,17 @@ main{
                     font-size: 22px;
                     color: #414141;
                 }
+                .shop-right{
+                    width: 90px;
+                    height: 70px;
+                    line-height: 100px;
+                    display: block;
+                    color: #414141;
+                    font-size: 14px;
+                    float: right;
+                    text-align: right;
+                    background: url(/img/cart01.png) no-repeat scroll 0 42px;
+                }
             }
             table {
                 width: 962px;

@@ -41,9 +41,6 @@ require(['require.config'],()=>{
                     location.href = "/";//回到首页
 
             }
-
-
-
         }
         new Login();
     })
