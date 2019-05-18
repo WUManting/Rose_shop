@@ -51,7 +51,7 @@ require(['require.config'],()=>{
                    
                     localStorage.setItem('cart',JSON.stringify(cart));
                     $(this).parents('tr').find('.shopping_cart_sl').val(num);
-                    console.log(_this);
+                    // console.log(_this);
                      _this.allMoney();
                     })
                 $(".cart-container").on('click','.cart_down',(e) =>{
@@ -118,9 +118,12 @@ require(['require.config'],()=>{
                                 console.log(cart[index]);
                                 cart.splice(index,1);
                                 localStorage.setItem('cart',JSON.stringify(cart));
-                                // this.allMoney();
+                                // console.log(11);
+                                _this.allMoney();
                             }
+                            
                     $(this).parents('tr').find('.shopping_cart_sl').val(num); 
+                    
                     this.allMoney();
                 })
             }
